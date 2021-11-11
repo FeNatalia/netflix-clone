@@ -1,0 +1,48 @@
+.navigation {
+    padding: var(--space-small);
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 40px;
+}
+
+.navigation .logo img{
+    padding-left: var(--space-big);
+    height: 20px;
+    width: auto;
+}
+.nav-list {
+    text-align: center;
+}
+.nav-list ul{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: var(--space-small);
+}
+
+.nav-list li{
+    font-size: 12px;
+    list-style: none;
+    margin: var(--space-medium);
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: white;
+}
+
+.navigation .logout {
+    position: absolute;
+    right: 4%;
+
+}
+
+.navigation .logout button{
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border: 1px solid black;
+    
+}

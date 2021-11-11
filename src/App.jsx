@@ -5,6 +5,7 @@ import { getDocument } from "scripts/fireStore";
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Browser from "components/Browser";
+import "styles/styles.css";
 
 export default function App() {
   // Global state

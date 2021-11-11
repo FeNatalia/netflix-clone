@@ -7,6 +7,7 @@ import InputField from "components/InputField";
 import fields from "data/fields-signup.json";
 import { createAccount } from "scripts/authentification";
 import { createDocumentWithId } from "scripts/fireStore";
+import Logo from "assets/Netelix-logo.png";
 
 export default function SignUp() {
   // Global state
@@ -31,7 +32,7 @@ export default function SignUp() {
   }
 
   async function onSuccess(uid) {
-    const newUser = { name: form.name, city: form.city, isTeacher: false };
+    const newUser = { name: form.name, city: form.city, isAdmin: false };
     await createDocumentWithId("users", uid, newUser);
     alert("Your account is successfully created, please login now");
     history.push("/");
@@ -51,16 +52,22 @@ export default function SignUp() {
   ));
 
   return (
-    <div id="auth-page">
+    <div id="signup-page">
       <header>
-        <h3>Register to Netelix</h3>
+        <div className="auth-logo">
+            <img src={Logo} alt=""/>
+        </div>
+        <div className="signin-link">
+            <Link to="/">Sign In</Link>
+        </div>
       </header>
       <div className="auth-page-content">
+          <h2>Create an account to start using Netelix</h2>
+          <h3>Just this step and you're finished! We hate paperwork, too.</h3>
         <form onSubmit={onSubmit}>
           {InputFields}
           <p>{errorMassage}</p>
-          <button>Register</button>
-          <Link to="/">Login instead</Link>
+          <button>Sign up</button>
         </form>
       </div>
     </div>
