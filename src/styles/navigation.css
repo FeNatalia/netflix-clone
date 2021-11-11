@@ -32,17 +32,21 @@
     text-decoration: none;
     color: white;
 }
-
+.nav-list a:hover { 
+    color: gray
+}
 .navigation .logout {
     position: absolute;
     right: 4%;
-
 }
 
 .navigation .logout button{
-    background-color: black;
+    background-color: #312D2D;
     color: white;
     font-size: 12px;
-    border: 1px solid black;
-    
+    border: 1px solid #312D2D;
+}
+
+.logout button:hover{
+    text-decoration: underline;
 }

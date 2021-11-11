@@ -57,6 +57,7 @@
 
 #signin-page form p{
     color: orange;
+    margin-top: 0;
 }
 
 #signin-page h1{
