@@ -3,10 +3,82 @@
     height: 100vh;
 }
 
+#signup-page img{
+    height: 42px;
+    width: auto;
+    margin: var(--space-medium);
+}
+
+#signup-page header{
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.signin-link{
+    position: absolute;
+    right: 4%;
+}
+
+.signin-link a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #signup-page h2{
     color: black;
+    width: 350px;
+    margin-left: 60px;
 }
 
 #signup-page h3{
     color: black;
+    width: 350px;
+    margin-left: 60px;
 }
+
+.signup-page-content form{
+    width: 300px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+#signup-page .input-field input{
+    background-color: white;
+    width: 380px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: var(--space-medium);
+    margin-bottom: var(--space-medium);
+    border-radius: 2px;
+    border: 1px solid #393838;
+}
+
+#signup-page button{
+    width: 400px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin-top: var(--space-small);
+    margin-bottom: var(--space-medium);
+}
+
+.signup-page-content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form form{
+    width: 400px;
+}
+
