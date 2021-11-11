@@ -2,28 +2,21 @@
     {
       "key": "name",
       "label": "Name",
-      "placeholder": "John Doe",
-      "type": "text",
-      "required": true
-    },
-    {
-      "key": "city",
-      "label": "City",
-      "placeholder": "New York",
+      "placeholder": "Your name",
       "type": "text",
       "required": true
     },
     {
       "key": "email",
       "label": "Email",
-      "placeholder": "john@mail.com",
+      "placeholder": "Email address",
       "type": "email",
       "required": true
     },
     {
       "key": "password",
       "label": "Password",
-      "placeholder": "********",
+      "placeholder": "Add a password",
       "type": "password",
       "required": true
     }

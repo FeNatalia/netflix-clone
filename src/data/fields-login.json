@@ -2,14 +2,13 @@
     {
       "key": "email",
       "label": "Email",
-      "placeholder": "john@mail.com",
+      "placeholder": "Email",
       "type": "email",
       "required": true
     },
     {
       "key": "password",
-      "label": "Password",
-      "placeholder": "********",
+      "placeholder": "Password",
       "type": "password",
       "required": true
     }

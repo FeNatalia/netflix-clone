@@ -6,9 +6,9 @@ import { Link, useHistory } from "react-router-dom";
 import InputField from "../components/InputField";
 import fields from "../data/fields-login.json";
 import { signIn } from "scripts/authentification";
-import InputCheckbox from "components/InputCheckbox";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
+import Logo from "assets/Netelix-logo.png";
 
 export default function Login() {
   // Global state
@@ -17,7 +17,6 @@ export default function Login() {
 
   // Local state
   const [form, setForm] = useState({});
-  const [remember, setRemember] = useState(false);
   const [errorMassage, setErrorMessage] = useState("");
 
   // Methods
@@ -37,7 +36,7 @@ export default function Login() {
     const document = await getDocument("users", uid);
     setUser(document);
     setIsLogged(true);
-    if (remember) localStorage.setItem("uid", uid);
+    localStorage.setItem("uid", uid);
     history.push("/");
   }
 
@@ -56,20 +55,21 @@ export default function Login() {
   ));
 
   return (
-    <div id="auth-page">
+    <div id="signin-page">
       <header>
-        <h3>Login to Netelix</h3>
+        <img src={Logo} alt=""/>
       </header>
-      <div className="auth-page-content">
-        <form onSubmit={onSubmit}>
-          {InputFields}
-          <p>{errorMassage}</p>
-          <InputCheckbox state={[remember, setRemember]}>
-            Remember me
-          </InputCheckbox>
-          <button>Login</button>
-          <Link to="/signup">Registration</Link>
-        </form>
+      <div className="auth-content">
+        <div className="auth-form">
+        <h1>Sign In</h1>
+          <form onSubmit={onSubmit}>
+            {InputFields}
+            <p>{errorMassage}</p>
+            <button>Sign In</button>
+            <small>New to Netflix?</small>
+            <Link to="/signup">Sign up now</Link>
+          </form>
+        </div>
       </div>
     </div>
   );
