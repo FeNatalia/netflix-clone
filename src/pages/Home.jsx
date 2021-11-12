@@ -1,5 +1,5 @@
 // NPM Packages
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCollection } from "scripts/fireStore";
 
@@ -7,6 +7,8 @@ import { getCollection } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import { useStreaming } from "state/StreamingProvider";
 import VideoItem from "components/VideoItem";
+import VideoModal from "pages/VideoModal";
+import Modal from "components/Modal";
 
 export default function Home() {
   // Global state
@@ -16,6 +18,7 @@ export default function Home() {
 
   // Local state
   const path = "videos";
+  const [modal, setModal] = useState(null);
 
   // Methods
   const fetchData = useCallback(
@@ -29,15 +32,20 @@ export default function Home() {
   useEffect(() => fetchData(path), [fetchData]);
 
   // Components
-  const CourseItems = videos.map((item) => (
-    <Link key={item.id} to={`/videos/${item.id}`}>
-      <VideoItem key={item.id} item={item} />
-    </Link>
+  const VideoItems = videos.map((item) => (
+    //<Link key={item.id} to={`/videos/${item.id}`}>
+      <VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
+    //</Link>
   ));
 
   const AdminVideoItems = videos.map((item) => (
     <VideoItem item={item} to={`edit/${item.id}`} />
   ));
+
+    // Methods
+    function onProject(item) {
+        setModal(<VideoModal video={item} />);
+    }
 
   return (
     <div id="home-page">
@@ -48,7 +56,7 @@ export default function Home() {
         <p>You logged in as {user.name}</p>
         <h2>My videos</h2>
         <div className="movies">
-          {user.isAdmin ? AdminVideoItems : CourseItems}
+          {user.isAdmin ? AdminVideoItems : VideoItems}
         </div>
         {user.isAdmin && (
           <div id="add-video">
@@ -56,6 +64,7 @@ export default function Home() {
           </div>
         )}
       </div>
+      <Modal state={[modal, setModal]} />
     </div>
   );
 }

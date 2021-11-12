@@ -16,5 +16,11 @@
       "label": "Image link",
       "placeholder": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb72?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHhtYXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "type": "text"
+    },
+    {
+        "key": "videoURL",
+        "label": "Image link",
+        "placeholder": "e.g. rn9opYb7d4g (an Id after youtube.com/watch?v=)",
+        "type": "text"
     }
   ]
