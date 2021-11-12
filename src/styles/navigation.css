@@ -41,10 +41,10 @@
 }
 
 .navigation .logout button{
-    background-color: #312D2D;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     font-size: 12px;
-    border: 1px solid #312D2D;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .logout button:hover{

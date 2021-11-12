@@ -9,9 +9,9 @@ export default function VideoItem({ item, to, onClick}) {
   const { user } = useAuth();
 
   return (
-    <section className="video-item">
+    <section className="video-item" onClick={onClick} >
       <img id="video-image" src={imageURL} alt="Video thumbnail" />
-      <div onClick={onClick}>
+      <div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

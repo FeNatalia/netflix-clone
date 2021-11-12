@@ -7,7 +7,7 @@ import { getCollection } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import { useStreaming } from "state/StreamingProvider";
 import VideoItem from "components/VideoItem";
-import VideoModal from "pages/VideoModal";
+import VideoModal from "components/VideoModal";
 import Modal from "components/Modal";
 
 export default function Home() {
@@ -33,9 +33,7 @@ export default function Home() {
 
   // Components
   const VideoItems = videos.map((item) => (
-    //<Link key={item.id} to={`/videos/${item.id}`}>
-      <VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
-    //</Link>
+    <VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
   ));
 
   const AdminVideoItems = videos.map((item) => (

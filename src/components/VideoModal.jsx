@@ -14,12 +14,14 @@ export default function VideoModal({video}) {
   //const video = videos.find((item) => item.id === videoId);
 
   return (
-    <div id="video-page">
-        <div className="video-container">
-            <YouTube videoId={video.videoURL} />
+    <div id="modal-popup">
+        <div className="modal-img">
+          <YouTube videoId={video.videoURL} />
         </div>
-        <h1>{video.title}</h1>
-        <p>{video.description}</p>
+        <div className="modal-body">
+          <h1>{video.title}</h1>
+          <p>{video.description}</p>
+        </div>
     </div>
   );
 }
