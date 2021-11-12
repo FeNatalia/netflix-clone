@@ -72,5 +72,6 @@
     padding-left: var(--space-medium);
     margin-bottom: var(--space-medium);
     border-radius: 5px;
+    color: white;
     border: 1px solid #393838;
 }
