@@ -7,7 +7,6 @@ import { getCollection } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import { useStreaming } from "state/StreamingProvider";
 import VideoItem from "components/VideoItem";
-import Modal from "components/Modal";
 import UserVideoItems from "components/UserVideoItems";
 import AdminScreen from "screens/AdminScreen";
 import UserScreen from "screens/UserScreen";
@@ -20,7 +19,6 @@ export default function Home() {
 
   // Local state
   const path = "videos";
-  const [modal, setModal] = useState(null);
 
   // Methods
   const fetchData = useCallback(
@@ -44,7 +42,7 @@ export default function Home() {
   return (
     <div id="home-page">
       
-      {user.isAdmin ? <AdminScreen videos={videos}/> : <UserScreen modal={modal} setModal={setModal} videos={videos}/>}
+      {user.isAdmin ? <AdminScreen videos={videos}/> : <UserScreen videos={videos}/>}
       <p>You logged in as {user.name}</p>
       {/*<div className="home-page-content">
         {user.isAdmin ? AdminVideoItems : <UserVideoItems videos={videos} setModal={setModal}/>}
@@ -55,7 +53,6 @@ export default function Home() {
         )}
         <p>You logged in as {user.name}</p>
         </div>*/}
-      <Modal state={[modal, setModal]} />
     </div>
   );
 }

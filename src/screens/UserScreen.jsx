@@ -1,7 +1,16 @@
+// NPM Packages
+import { useState } from "react";
+
 import VideoItem from "components/VideoItem";
 import VideoModal from "components/VideoModal";
+import Modal from "components/Modal";
+import Play from "assets/Play.png";
 
-export default function UserScreen({ setModal, videos }) {
+export default function UserScreen({ videos }) {
+
+  // Local state
+  const [modal, setModal] = useState(null);
+
           // Methods
           function onProject(item) {
             setModal(<VideoModal video={item} />);
@@ -9,11 +18,14 @@ export default function UserScreen({ setModal, videos }) {
 
     const banner = videos.filter((item) => item.id === "IFcozmOiElFcWL5kFDjf").map(item => (
         <header id="banner">
-          <img src={item.imageURL} alt="Video thumbnail" />
+          <div className="hero">
+            <img src={item.imageURL} alt="Video thumbnail" />
+          </div>
           <div id="banner-info">
             <h1>{item.title}</h1>
             <h3>#1 in Movies Today</h3>
             <p>{item.description}</p>
+            <img src={Play} alt="play button" onClick={() => onProject(item)}/>
           </div>
         </header>
       ));
@@ -49,6 +61,7 @@ const ChristmasItems = videos.filter(video=> (video.genre.toLowerCase()).include
           </div>
         </div>
         </div>
+        <Modal state={[modal, setModal]} />
       </div>
     )
   }
