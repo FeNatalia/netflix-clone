@@ -1,11 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Saira+Condensed:wght@900&display=swap');
+
 /* User Screen */
+
+#banner {
+    height: 550px;
+}
 
 #banner img{
 width: 100vw;
-height: 80vh;
+height: 700px;
 object-fit: cover;
 margin: 0;
 padding: 0;
+}
+
+#banner-info {
+    position: relative;
+    top: -500px;
+    margin-left: var(--space-bigger);
+    width: 400px;
+}
+
+#banner-info h1{
+    color: red;
+    line-height: 65px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px #222121;
+    font-size: 70px;
+    margin-bottom: 0;
 }
 
 #home-page{
@@ -21,18 +46,21 @@ padding: 0;
     display: flex;
 
 }
-.home-page-content img{
-    width: 280px;
-    height: 150px;
-    border-radius: 4px;
-    object-fit: cover;
-    margin: 0;
+#video-image{
     padding-right: var(--space-small); 
 }
+#video-image img{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0;
+}
+
 
 .all-categories{
     position: relative;
-    top: -100px;
+    top: 50px;
     padding: 0;
     margin: 0;
     padding-right: var(--space-bigger);
