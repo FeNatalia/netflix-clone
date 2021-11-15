@@ -11,10 +11,10 @@ export default function VideoItem({ item, to, onClick}) {
   return (
     <section className="video-item" onClick={onClick} >
       <img id="video-image" src={imageURL} alt="Video thumbnail" />
-      <div>
+      {/*<div>
         <h3>{title}</h3>
         <p>{description}</p>
-      </div>
+      </div>*/}
         {user.isAdmin && (
           <div id="edit-link">
             <Link className="button-details" to={to}>

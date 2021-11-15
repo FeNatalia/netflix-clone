@@ -19,8 +19,27 @@
     },
     {
         "key": "videoURL",
-        "label": "Image link",
+        "label": "Video link",
         "placeholder": "e.g. rn9opYb7d4g (an Id after youtube.com/watch?v=)",
         "type": "text"
+    },
+    {
+      "key": "genre",
+      "label": "Genre",
+      "placeholder": "Comedy",
+      "type": "text"
+    },
+    {
+      "key": "cast",
+      "label": "Cast",
+      "placeholder": "John Doe, Christina Armaris",
+      "type": "text"
+    },
+    {
+      "key": "year",
+      "label": "Year",
+      "placeholder": "2019",
+      "type": "number"
     }
+    
   ]

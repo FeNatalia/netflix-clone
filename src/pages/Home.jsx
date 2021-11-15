@@ -7,8 +7,10 @@ import { getCollection } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import { useStreaming } from "state/StreamingProvider";
 import VideoItem from "components/VideoItem";
-import VideoModal from "components/VideoModal";
 import Modal from "components/Modal";
+import UserVideoItems from "components/UserVideoItems";
+import AdminScreen from "screens/AdminScreen";
+import UserScreen from "screens/UserScreen";
 
 export default function Home() {
   // Global state
@@ -31,38 +33,32 @@ export default function Home() {
 
   useEffect(() => fetchData(path), [fetchData]);
 
-  // Components
-  const VideoItems = videos.map((item) => (
-    <VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
-  ));
-
+  /* Components
   const AdminVideoItems = videos.map((item) => (
     <VideoItem item={item} to={`edit/${item.id}`} />
   ));
-
-    // Methods
-    function onProject(item) {
-        setModal(<VideoModal video={item} />);
-    }
+  const banner = videos.filter((item) => item.id === "IFcozmOiElFcWL5kFDjf").map(banner => (
+    <header id="banner"><img src={banner.imageURL} alt="Video thumbnail" /></header>
+  ));*/
 
   return (
     <div id="home-page">
-      <header>
-        <h1>Home</h1>
-      </header>
-      <div className="home-page-content">
-        <p>You logged in as {user.name}</p>
-        <h2>My videos</h2>
-        <div className="movies">
-          {user.isAdmin ? AdminVideoItems : VideoItems}
-        </div>
+      
+      {user.isAdmin ? <AdminScreen videos={videos}/> : <UserScreen modal={modal} setModal={setModal} videos={videos}/>}
+      <p>You logged in as {user.name}</p>
+      {/*<div className="home-page-content">
+        {user.isAdmin ? AdminVideoItems : <UserVideoItems videos={videos} setModal={setModal}/>}
         {user.isAdmin && (
           <div id="add-video">
             <Link to="edit/new-profile">Add new video</Link>
           </div>
         )}
-      </div>
+        <p>You logged in as {user.name}</p>
+        </div>*/}
       <Modal state={[modal, setModal]} />
     </div>
   );
 }
+
+
+

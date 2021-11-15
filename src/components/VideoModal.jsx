@@ -24,8 +24,10 @@ export default function VideoModal({video}) {
         <div className="modal-title">
           <h1>{video.title}</h1>
         </div>
+        <div className="gradient"></div>
         <div className="modal-body">
           <div className="modal-description">
+            <p>{video.year}</p>
             <p>{video.description}</p>
           </div>
           <div className="modal-details">
