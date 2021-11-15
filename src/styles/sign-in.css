@@ -57,6 +57,7 @@
 
 #signin-page form p{
     color: orange;
+    margin-top: 0;
 }
 
 #signin-page h1{
@@ -71,5 +72,6 @@
     padding-left: var(--space-medium);
     margin-bottom: var(--space-medium);
     border-radius: 5px;
+    color: white;
     border: 1px solid #393838;
 }

@@ -1,5 +1,9 @@
 .navigation {
-    padding: var(--space-small);
+    padding-top: var(--space-small);
+    padding-bottom: var(--space-small);
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
     position: relative;
     display: flex;
     -webkit-box-align: center;
@@ -25,24 +29,28 @@
 .nav-list li{
     font-size: 12px;
     list-style: none;
-    margin: var(--space-medium);
+    padding: var(--space-medium);
 }
 
 .nav-list a{
     text-decoration: none;
     color: white;
 }
-
+.nav-list a:hover { 
+    color: gray
+}
 .navigation .logout {
     position: absolute;
     right: 4%;
-
 }
 
 .navigation .logout button{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     font-size: 12px;
-    border: 1px solid black;
-    
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.logout button:hover{
+    text-decoration: underline;
 }
