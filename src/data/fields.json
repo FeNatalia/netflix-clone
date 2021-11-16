@@ -1,43 +1,43 @@
 [
     {
       "key": "title",
-      "label": "Course name",
+      "label": "Video title",
       "placeholder": "Love Hard",
       "type": "text"
     },
     {
       "key": "description",
-      "label": "Description",
+      "label": "Description of the video",
       "placeholder": "A romantic Xmas movie",
       "type": "text"
     },
     {
       "key": "imageURL",
       "label": "Image link",
-      "placeholder": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb72?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHhtYXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "placeholder": "https://images.example.com/photo-1",
       "type": "text"
     },
     {
         "key": "videoURL",
-        "label": "Video link",
-        "placeholder": "e.g. rn9opYb7d4g (an Id after youtube.com/watch?v=)",
+        "label": "Youtube video link id (An id after youtube.com/watch?v=)",
+        "placeholder": "rn9opYb7d4g",
         "type": "text"
     },
     {
       "key": "genre",
-      "label": "Genre",
-      "placeholder": "Comedy",
+      "label": "Genre(s)",
+      "placeholder": "Comedy, Christmas",
       "type": "text"
     },
     {
       "key": "cast",
       "label": "Cast",
-      "placeholder": "John Doe, Christina Armaris",
+      "placeholder": "Lee Zhang, Sardana Alaas",
       "type": "text"
     },
     {
       "key": "year",
-      "label": "Year",
+      "label": "Release year",
       "placeholder": "2019",
       "type": "number"
     }
