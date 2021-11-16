@@ -63,6 +63,11 @@ padding: 0;
     margin: 0;
 }
 
+#video-image img:hover{
+    position: relative;
+    top: -20px;
+}
+
 
 .all-categories{
     position: relative;
@@ -78,8 +83,8 @@ padding: 0;
 
 /* Admin Screen*/
 #admin-screen{
-    padding-left: var(--space-big);
-    padding-right: var(--space-big);
+    margin: 0; 
+    padding: 0;
 }
 
 #add-video a{
@@ -93,7 +98,8 @@ padding: 0;
 }
 
 #add-video{
-    margin-top: var(--space-big);
+    padding-top: 80px;
+    padding-left: var(--space-big);
 }
 .admin-page-content img{
     width: 280px;
@@ -106,12 +112,15 @@ padding: 0;
 
 .admin-page-content {
     margin-top: var(--space-bigger);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: var(--space-big);
 }
 
 .admin-video-item{
     width: 280px;
     padding-right: var(--space-small);
+    padding-bottom: var(--space-big);
 }
 
 #edit-link .button-details {
