@@ -14,6 +14,20 @@ export default function AdminScreen( {videos}) {
             <div className="admin-page-content">
                 {AdminVideoItems}
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
   }

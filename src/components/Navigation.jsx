@@ -22,6 +22,7 @@ export default function Navigation() {
   return (
     <>
       {isLogged && (
+        <div id="nav">
         <nav className="navigation">
             <div className="logo">
                 <img src={Logo} alt=""/>
@@ -38,6 +39,7 @@ export default function Navigation() {
                 <button onClick={onLogout}>Sign out</button>
             </div>
         </nav>
+        </div>
       )}
     </>
   );
