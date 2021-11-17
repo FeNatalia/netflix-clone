@@ -1,77 +1,77 @@
-#signin-page img{
-    height: 42px;
-    width: auto;
-    margin: var(--space-medium);
+#signin-page img {
+  height: 42px;
+  width: auto;
+  margin: var(--space-medium);
 }
 
 #signin-page {
-    background-image: url("assets/pictures/signin.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    display: block;
+  background-image: url("assets/pictures/signin.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: block;
 }
-#signin-page .auth-content{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+#signin-page .auth-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
-#signin-page small{
-    color: gray;
-}
-
-#signin-page a{
-    color: white;
-    text-decoration: none;
+#signin-page small {
+  color: gray;
 }
 
-#signin-page form{
-    display: block;
+#signin-page a {
+  color: white;
+  text-decoration: none;
 }
 
-#signin-page button{
-    width: 300px;
-    height: 45px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-    border: 1px solid red;
-    margin-top: var(--space-small);
-    margin-bottom: var(--space-medium);
+#signin-page form {
+  display: block;
 }
 
-#signin-page .auth-form{
-    width: 300px;
-    padding: 60px;
-    background-color:rgba(0, 0, 0, 0.5);
-    background-color:rgba(0, 0, 0, 0.5);
+#signin-page button {
+  width: 300px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: 1px solid red;
+  margin-top: var(--space-small);
+  margin-bottom: var(--space-medium);
 }
 
-#signin-page form small{
-    margin-right: var(--space-small);
-    font-size: 16px;
+#signin-page .auth-form {
+  width: 300px;
+  padding: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-#signin-page form p{
-    color: orange;
-    margin-top: 0;
+#signin-page form small {
+  margin-right: var(--space-small);
+  font-size: 16px;
 }
 
-#signin-page h1{
-    margin-top: 0;
+#signin-page form p {
+  color: orange;
+  margin-top: 0;
 }
 
-#signin-page .input-field input{
-    background-color: #393838;
-    width: 280px;
-    height: 40px;
-    font-size: 16px;
-    padding-left: var(--space-medium);
-    margin-bottom: var(--space-medium);
-    border-radius: 5px;
-    color: white;
-    border: 1px solid #393838;
+#signin-page h1 {
+  margin-top: 0;
+}
+
+#signin-page .input-field input {
+  background-color: #393838;
+  width: 280px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: var(--space-medium);
+  margin-bottom: var(--space-medium);
+  border-radius: 5px;
+  color: white;
+  border: 1px solid #393838;
 }

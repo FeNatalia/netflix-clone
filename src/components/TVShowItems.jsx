@@ -1,10 +1,14 @@
 // NPM Packages
 import { useRef, useState } from "react";
-import VideoItem from "./VideoItem";
+// Project Files
+import VideoItem from "components/VideoItem";
 
 export default function TVShowItems({ videos, onProject }) {
+  // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
+
+  // Methods
   const handleHorizantalScroll = (element, speed, distance, step) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
@@ -20,6 +24,8 @@ export default function TVShowItems({ videos, onProject }) {
       }
     }, speed);
   };
+
+  // Components
   const AllItems = videos.map((item) => (
     <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
   ));

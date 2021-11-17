@@ -1,7 +1,5 @@
 // NPM Packages
 import { useHistory } from "react-router";
-//import { Link } from "react-router-dom";
-
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Logo from "assets/Netelix-logo.png";
@@ -24,21 +22,29 @@ export default function Navigation() {
     <>
       {isLogged && (
         <div id="nav">
-        <nav className="navigation">
+          <nav className="navigation">
             <div className="logo">
-                <img src={Logo} alt=""/>
+              <img src={Logo} alt="" />
             </div>
-            {user.isAdmin ? null: <div className="nav-list">
+            {user.isAdmin ? null : (
+              <div className="nav-list">
                 <ul>
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#movies-carousel">Movies</a></li>
-                    <li><a href="#tvshows-carousel">TV Shows</a></li>
+                  <li>
+                    <a href="#banner">Home</a>
+                  </li>
+                  <li>
+                    <a href="#movies-carousel">Movies</a>
+                  </li>
+                  <li>
+                    <a href="#tvshows-carousel">TV Shows</a>
+                  </li>
                 </ul>
-            </div>}
+              </div>
+            )}
             <div className="logout">
-                <button onClick={onLogout}>Sign out</button>
+              <button onClick={onLogout}>Sign out</button>
             </div>
-        </nav>
+          </nav>
         </div>
       )}
     </>

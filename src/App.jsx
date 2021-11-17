@@ -7,7 +7,6 @@ import { useAuth } from "state/AuthProvider";
 import Browser from "components/Browser";
 import "styles/styles.css";
 
-
 export default function App() {
   // Global state
   const { isLogged, setUser, setIsLogged } = useAuth();
@@ -30,12 +29,10 @@ export default function App() {
   );
   useEffect(() => fetchUser("users"), [fetchUser]);
 
-
-
   return (
     <div className="App">
       {status === 0 && <p>Loading</p>}
-      {status === 1 && <Browser isLogged={isLogged}/>}
+      {status === 1 && <Browser isLogged={isLogged} />}
     </div>
   );
 }
