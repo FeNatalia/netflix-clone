@@ -1,23 +1,23 @@
 [
-    {
-      "key": "name",
-      "label": "Name",
-      "placeholder": "Your name",
-      "type": "text",
-      "required": true
-    },
-    {
-      "key": "email",
-      "label": "Email",
-      "placeholder": "Email address",
-      "type": "email",
-      "required": true
-    },
-    {
-      "key": "password",
-      "label": "Password",
-      "placeholder": "Add a password",
-      "type": "password",
-      "required": true
-    }
-  ]
+  {
+    "key": "name",
+    "label": "Name",
+    "placeholder": "Your name",
+    "type": "text",
+    "required": true
+  },
+  {
+    "key": "email",
+    "label": "Email",
+    "placeholder": "Email address",
+    "type": "email",
+    "required": true
+  },
+  {
+    "key": "password",
+    "label": "Password",
+    "placeholder": "Add a password",
+    "type": "password",
+    "required": true
+  }
+]

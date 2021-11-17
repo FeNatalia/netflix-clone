@@ -55,21 +55,21 @@ export default function SignUp() {
     <div id="signup-page">
       <header>
         <div className="signup-logo">
-            <img src={Logo} alt=""/>
+          <img src={Logo} alt="" />
         </div>
         <div className="signin-link">
-            <Link to="/">Sign In</Link>
+          <Link to="/">Sign In</Link>
         </div>
       </header>
       <div className="signup-page-content">
         <div className="signup-form">
-            <h2>Create an account to start using Netelix</h2>
-            <h3>Just this step and you're finished! We hate paperwork, too.</h3>
-            <form onSubmit={onSubmit} className="form">
-              {InputFields}
-              <p>{errorMassage}</p>
-              <button>Sign up</button>
-            </form>
+          <h2>Create an account to start using Netelix</h2>
+          <h3>Just this step and you're finished! We hate paperwork, too.</h3>
+          <form onSubmit={onSubmit} className="form">
+            {InputFields}
+            <p>{errorMassage}</p>
+            <button>Sign up</button>
+          </form>
         </div>
       </div>
     </div>

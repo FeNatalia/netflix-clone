@@ -28,7 +28,7 @@ export default function EditPage() {
   function onSave(profile) {
     id === "new-profile" ? onCreateProfile(profile) : onUpdateProfile(profile);
     alert("Successfully saved!");
-    (history.push("/"));
+    history.push("/");
   }
 
   function onChange(key, value) {
@@ -50,22 +50,24 @@ export default function EditPage() {
   return (
     <div className="edit-page">
       <div className="edit-content">
-      <section>
-        {profile.videoURL !== undefined && profile.videoURL !== "" && <YouTube videoId={profile.videoURL} />}
-      </section>
-      <section>
-        <Information profile={profile} onChange={onChange} />
-        <div className="button-save">
-          <button onClick={() => onSave(profile)} className="button-save">
-            Save
-          </button>
-        </div>
-        <div className="link-go-back">
-          <Link to="/" id="button-add">
-            Go back
-          </Link>
-        </div>
-      </section>
+        <section>
+          {profile.videoURL !== undefined && profile.videoURL !== "" && (
+            <YouTube videoId={profile.videoURL} />
+          )}
+        </section>
+        <section>
+          <Information profile={profile} onChange={onChange} />
+          <div className="button-save">
+            <button onClick={() => onSave(profile)} className="button-save">
+              Save
+            </button>
+          </div>
+          <div className="link-go-back">
+            <Link to="/" id="button-add">
+              Go back
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );

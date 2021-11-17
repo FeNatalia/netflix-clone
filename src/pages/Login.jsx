@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 // Project files
-import InputField from "../components/InputField";
-import fields from "../data/fields-login.json";
+import InputField from "components/InputField";
+import fields from "data/fields-login.json";
 import { signIn } from "scripts/authentification";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
@@ -57,11 +57,11 @@ export default function Login() {
   return (
     <div id="signin-page">
       <header>
-        <img src={Logo} alt=""/>
+        <img src={Logo} alt="" />
       </header>
       <div className="auth-content">
         <div className="auth-form">
-        <h1>Sign In</h1>
+          <h1>Sign In</h1>
           <form onSubmit={onSubmit}>
             {InputFields}
             <p>{errorMassage}</p>

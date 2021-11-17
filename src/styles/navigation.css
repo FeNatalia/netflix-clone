@@ -1,65 +1,70 @@
 .navigation {
-    padding-top: var(--space-small);
-    padding-bottom: var(--space-small);
-    padding-right: 0;
-    padding-left: 0;
-    margin: 0;
-    position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    height: 40px;
-    position: fixed;
+  padding-top: var(--space-small);
+  padding-bottom: var(--space-small);
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 40px;
+  position: fixed;
 }
 
 #nav {
-    width: 100vw;
-    height: 60px;
-    z-index: 900;
-    position: fixed;
-    background: linear-gradient(rgb(14, 14, 0.8), rgba(14, 14, 14, 0.6),  rgba(14, 14, 14, 0.4), rgba(0, 0, 0, 0));
+  width: 100vw;
+  height: 60px;
+  z-index: 900;
+  position: fixed;
+  background: linear-gradient(
+    rgb(14, 14, 0.8),
+    rgba(14, 14, 14, 0.6),
+    rgba(14, 14, 14, 0.4),
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.navigation .logo img{
-    padding-left: var(--space-big);
-    height: 20px;
-    width: auto;
+.navigation .logo img {
+  padding-left: var(--space-big);
+  height: 20px;
+  width: auto;
 }
 .nav-list {
-    text-align: center;
+  text-align: center;
 }
-.nav-list ul{
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    padding-left: var(--space-small);
-}
-
-.nav-list li{
-    font-size: 12px;
-    list-style: none;
-    padding: var(--space-medium);
+.nav-list ul {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: var(--space-small);
 }
 
-.nav-list a{
-    text-decoration: none;
-    color: white;
+.nav-list li {
+  font-size: 12px;
+  list-style: none;
+  padding: var(--space-medium);
 }
-.nav-list a:hover { 
-    color: gray
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+}
+.nav-list a:hover {
+  color: gray;
 }
 .navigation .logout {
-    position: fixed;
-    right: 4%;
+  position: fixed;
+  right: 4%;
 }
 
-.navigation .logout button{
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    font-size: 12px;
-    border: 1px solid rgba(0, 0, 0, 0);
+.navigation .logout button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.logout button:hover{
-    text-decoration: underline;
+.logout button:hover {
+  text-decoration: underline;
 }

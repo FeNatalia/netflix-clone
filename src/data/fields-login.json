@@ -1,16 +1,15 @@
 [
-    {
-      "key": "email",
-      "label": "Email",
-      "placeholder": "Email",
-      "type": "email",
-      "required": true
-    },
-    {
-      "key": "password",
-      "placeholder": "Password",
-      "type": "password",
-      "required": true
-    }
-  ]
-  
+  {
+    "key": "email",
+    "label": "Email",
+    "placeholder": "Email",
+    "type": "email",
+    "required": true
+  },
+  {
+    "key": "password",
+    "placeholder": "Password",
+    "type": "password",
+    "required": true
+  }
+]

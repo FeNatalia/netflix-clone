@@ -1,45 +1,44 @@
 [
-    {
-      "key": "title",
-      "label": "Video title",
-      "placeholder": "Love Hard",
-      "type": "text"
-    },
-    {
-      "key": "description",
-      "label": "Description of the video",
-      "placeholder": "A romantic Xmas movie",
-      "type": "text"
-    },
-    {
-      "key": "imageURL",
-      "label": "Image link",
-      "placeholder": "https://images.example.com/photo-1",
-      "type": "text"
-    },
-    {
-        "key": "videoURL",
-        "label": "Youtube video link id (An id after youtube.com/watch?v=)",
-        "placeholder": "rn9opYb7d4g",
-        "type": "text"
-    },
-    {
-      "key": "genre",
-      "label": "Genre(s)",
-      "placeholder": "Comedy, Christmas",
-      "type": "text"
-    },
-    {
-      "key": "cast",
-      "label": "Cast",
-      "placeholder": "Lee Zhang, Sardana Alaas",
-      "type": "text"
-    },
-    {
-      "key": "year",
-      "label": "Release year",
-      "placeholder": "2019",
-      "type": "number"
-    }
-    
-  ]
+  {
+    "key": "title",
+    "label": "Video title",
+    "placeholder": "Love Hard",
+    "type": "text"
+  },
+  {
+    "key": "description",
+    "label": "Description of the video",
+    "placeholder": "A romantic Xmas movie",
+    "type": "text"
+  },
+  {
+    "key": "imageURL",
+    "label": "Image link",
+    "placeholder": "https://images.example.com/photo-1",
+    "type": "text"
+  },
+  {
+    "key": "videoURL",
+    "label": "Youtube video link id (An id after youtube.com/watch?v=)",
+    "placeholder": "rn9opYb7d4g",
+    "type": "text"
+  },
+  {
+    "key": "genre",
+    "label": "Genre(s)",
+    "placeholder": "Comedy, Christmas",
+    "type": "text"
+  },
+  {
+    "key": "cast",
+    "label": "Cast",
+    "placeholder": "Lee Zhang, Sardana Alaas",
+    "type": "text"
+  },
+  {
+    "key": "year",
+    "label": "Release year",
+    "placeholder": "2019",
+    "type": "number"
+  }
+]

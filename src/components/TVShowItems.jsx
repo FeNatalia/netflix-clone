@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 // Project Files
 import VideoItem from "components/VideoItem";
 
-export default function RomanticMoviesItems({ videos, onProject }) {
+export default function TVShowItems({ videos, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
@@ -26,13 +26,12 @@ export default function RomanticMoviesItems({ videos, onProject }) {
   };
 
   // Components
-  const RomanceItems = videos
-    .filter((video) => video.genre.toLowerCase().includes("romance"))
-    .map((item) => (
-      <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
-    ));
+  const AllItems = videos.map((item) => (
+    <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
+  ));
+
   return (
-    <div id="scroll">
+    <div id="tvshows-carousel">
       <div class="button-contianer">
         <button
           className="left"
@@ -51,10 +50,10 @@ export default function RomanticMoviesItems({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>Romantic movies</h2>
+        <h2>TV Shows</h2>
       </div>
       <div className="movies" ref={elementRef}>
-        {RomanceItems}
+        {AllItems}
       </div>
     </div>
   );
