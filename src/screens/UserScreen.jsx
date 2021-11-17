@@ -1,16 +1,18 @@
 // NPM Packages
 import { useState } from "react";
 
-import VideoItem from "components/VideoItem";
+//import VideoItem from "components/VideoItem";
 import VideoModal from "components/VideoModal";
 import Modal from "components/Modal";
 import Play from "assets/Play.png";
+import AllMoviesItems from "components/AllMoviesItems";
+import RomanticMoviesItems from "components/RomanticMoviesItems";
+import ChristmasMovies from "components/ChristmasMovies";
 
 export default function UserScreen({ videos }) {
 
   // Local state
   const [modal, setModal] = useState(null);
-
           // Methods
           function onProject(item) {
             setModal(<VideoModal video={item} />);
@@ -29,36 +31,14 @@ export default function UserScreen({ videos }) {
           </div>
         </header>
       ));
-
-      const AllItems = videos.map((item) => (
-        <VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
-      ));
-
-const RomanceItems = videos.filter(video=> (video.genre.toLowerCase()).includes("romance")).map((item) => (
-<VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
-));
-
-const ChristmasItems = videos.filter(video=> (video.genre.toLowerCase()).includes("christmas")).map((item) => (
-<VideoItem key={item.id} item={item} onClick={() => onProject(item)}/>
-));
-
     return(
-      <div>
+      <div id="user-home">
         {banner}
         <div className="home-page-content">
         <div className="all-categories">
-          <h2>All movies</h2>
-          <div className="movies">
-            {AllItems}
-          </div>
-          <h2>Romantic movies</h2>
-          <div className="movies">
-            {RomanceItems}
-          </div>
-          <h2>Christmas Movies</h2>
-          <div className="movies">
-            {ChristmasItems}
-          </div>
+          <AllMoviesItems videos={videos} onProject={onProject}/>
+          <RomanticMoviesItems videos={videos} onProject={onProject}/>
+          <ChristmasMovies videos={videos} onProject={onProject}/>
         </div>
         </div>
         <Modal state={[modal, setModal]} />
