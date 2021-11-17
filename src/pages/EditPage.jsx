@@ -6,6 +6,7 @@ import { useParams, useHistory, Link } from "react-router-dom";
 import Information from "components/Information";
 import { useStreaming } from "state/StreamingProvider";
 import { createDocument, updateDocument } from "scripts/fireStore";
+import YouTube from "react-youtube";
 
 export default function EditPage() {
   // Global state
@@ -26,7 +27,8 @@ export default function EditPage() {
 
   function onSave(profile) {
     id === "new-profile" ? onCreateProfile(profile) : onUpdateProfile(profile);
-    history.push("/");
+    alert("Successfully saved!");
+    (history.push("/"));
   }
 
   function onChange(key, value) {
@@ -47,9 +49,10 @@ export default function EditPage() {
 
   return (
     <div className="edit-page">
-      <header>
-        <h1>Edit page</h1>
-      </header>
+      <div className="edit-content">
+      <section>
+        {profile.videoURL !== undefined && profile.videoURL !== "" && <YouTube videoId={profile.videoURL} />}
+      </section>
       <section>
         <Information profile={profile} onChange={onChange} />
         <div className="button-save">
@@ -63,6 +66,7 @@ export default function EditPage() {
           </Link>
         </div>
       </section>
+      </div>
     </div>
   );
 }

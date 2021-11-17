@@ -1,0 +1,64 @@
+.edit-page {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align:left;
+}
+
+.edit-content {
+    padding-top: 80px;
+    padding-left: var(--space-big);
+    padding-right: var(--space-big);
+    padding-bottom: var(--space-big);
+}
+
+.edit-page input{
+        width: 631px;
+        height: 30px;
+        margin-bottom: var(--space-medium);
+        margin-top: var(--space-small);
+        padding-left: var(--space-small);
+        border-radius: 8px;
+        border: 1px rgb(170, 170, 170);
+        background-color: white
+}
+
+#edit-label {
+    color: gray;
+    margin-bottom: var(--space-small);
+    margin-top: var(--space-small);
+}
+
+.button-save{
+    text-align: center;
+}
+
+.button-save button{
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 8px;
+    width: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    padding: var(--space-small);
+}
+
+.link-go-back{
+    margin-top: var(--space-big);
+    text-align: center;
+}
+.link-go-back a{
+    background-color: red;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    padding-right: 29px;
+    padding-left: 29px;
+    padding-bottom: var(--space-small);
+    padding-top: var(--space-small);
+
+}

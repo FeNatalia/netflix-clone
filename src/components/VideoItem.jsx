@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "state/AuthProvider";
 
 export default function VideoItem({ item, to, onClick}) {
-  const { description, title, imageURL } = item;
+  const { imageURL } = item;
   const { user } = useAuth();
 
   return (
