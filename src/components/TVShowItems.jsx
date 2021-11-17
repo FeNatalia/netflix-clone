@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 // Project Files
 import VideoItem from "components/VideoItem";
 
-export default function TVShowItems({ videos, onProject }) {
+export default function TVShowItems({ series, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
@@ -26,7 +26,7 @@ export default function TVShowItems({ videos, onProject }) {
   };
 
   // Components
-  const AllItems = videos.map((item) => (
+  const AllItems = series.map((item) => (
     <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
   ));
 

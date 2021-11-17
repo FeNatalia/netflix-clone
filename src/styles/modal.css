@@ -87,3 +87,16 @@
 .modal-details .gray {
   color: gray;
 }
+
+#modal-popup .modal-body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 180px;
+  overflow: auto;
+}
+
+#serie-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: var(--space-small);
+}
