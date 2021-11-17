@@ -81,3 +81,7 @@
 .signup-form form {
   width: 400px;
 }
+
+.form p{
+  color: red;
+}
