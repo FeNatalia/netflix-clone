@@ -64,7 +64,14 @@ padding: 0;
     border-radius: 10px;
     object-fit: cover;
     margin: 0;
-    
+}
+
+#admin-video-image img{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0;
 }
 
 #video-image:hover{
