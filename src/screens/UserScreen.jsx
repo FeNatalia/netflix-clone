@@ -6,7 +6,7 @@ import Modal from "components/Modal";
 import Play from "assets/Play.png";
 import AllMoviesItems from "components/AllMoviesItems";
 import RomanticMoviesItems from "components/RomanticMoviesItems";
-import ChristmasMovies from "components/ChristmasMovies";
+import DocumentaryMoviesItems from "components/DocumentaryMoviesItems";
 import TVShowItems from "components/TVShowItems";
 
 export default function UserScreen({ videos, series }) {
@@ -39,7 +39,7 @@ export default function UserScreen({ videos, series }) {
         <div className="all-categories">
           <AllMoviesItems videos={videos} onProject={onProject} />
           <RomanticMoviesItems videos={videos} onProject={onProject} />
-          <ChristmasMovies videos={videos} onProject={onProject} />
+          <DocumentaryMoviesItems videos={videos} onProject={onProject} />
           <TVShowItems series={series} onProject={onProject} />
         </div>
       </div>

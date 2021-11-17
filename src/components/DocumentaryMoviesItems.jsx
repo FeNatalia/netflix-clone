@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 // Project Files
 import VideoItem from "components/VideoItem";
 
-export default function ChristmasMovies({ videos, onProject }) {
+export default function DocumentaryMoviesItems({ videos, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
@@ -26,8 +26,8 @@ export default function ChristmasMovies({ videos, onProject }) {
   };
 
   // Components
-  const ChristmasItems = videos
-    .filter((video) => video.genre.toLowerCase().includes("christmas"))
+  const DocumentaryItems = videos
+    .filter((video) => video.genre.toLowerCase().includes("documentary"))
     .map((item) => (
       <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
     ));
@@ -51,10 +51,10 @@ export default function ChristmasMovies({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>Christmas Movies</h2>
+        <h2>Documentaries</h2>
       </div>
       <div className="movies" ref={elementRef}>
-        {ChristmasItems}
+        {DocumentaryItems}
       </div>
     </div>
   );
