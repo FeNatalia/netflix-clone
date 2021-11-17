@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 import { useAuth } from "state/AuthProvider";
 
 export default function VideoItem({ item, to, onClick}) {
-  const { imageURL } = item;
+  const { title, imageURL } = item;
   const { user } = useAuth();
 
   return (
     <section className="video-item" onClick={onClick} >
       <div id="video-image">
         <img src={imageURL} alt="Video thumbnail" />
+        <h3>{title}</h3>
       </div>
       {/*<div>
-        <h3>{title}</h3>
         <p>{description}</p>
       </div>*/}
         {user.isAdmin && (

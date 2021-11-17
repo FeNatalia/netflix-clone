@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import VideoItem from "./VideoItem";
 
-export default function AllMoviesItems({ videos, onProject }) {
+export default function TVShowItems({ videos, onProject }) {
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
   const handleHorizantalScroll = (element, speed, distance, step) => {
@@ -25,7 +25,7 @@ export default function AllMoviesItems({ videos, onProject }) {
   ));
 
   return (
-    <div id="movies-carousel">
+    <div id="tvshows-carousel">
       <div class="button-contianer">
         <button
           className="left"
@@ -44,7 +44,7 @@ export default function AllMoviesItems({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>All movies</h2>
+        <h2>TV Shows</h2>
       </div>
       <div className="movies" ref={elementRef}>
         {AllItems}

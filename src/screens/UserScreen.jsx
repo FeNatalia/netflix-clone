@@ -8,6 +8,7 @@ import Play from "assets/Play.png";
 import AllMoviesItems from "components/AllMoviesItems";
 import RomanticMoviesItems from "components/RomanticMoviesItems";
 import ChristmasMovies from "components/ChristmasMovies";
+import TVShowItems from "components/TVShowItems";
 
 export default function UserScreen({ videos }) {
 
@@ -39,6 +40,7 @@ export default function UserScreen({ videos }) {
           <AllMoviesItems videos={videos} onProject={onProject}/>
           <RomanticMoviesItems videos={videos} onProject={onProject}/>
           <ChristmasMovies videos={videos} onProject={onProject}/>
+          <TVShowItems videos={videos} onProject={onProject}/>
         </div>
         </div>
         <Modal state={[modal, setModal]} />

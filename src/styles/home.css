@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Saira+Condensed:wght@900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 /* User Screen */
 #user-home h2{
     margin-bottom: 0;
+    margin-top: 0;
 }
 #banner {
     height: 550px;
@@ -63,13 +64,47 @@ padding: 0;
     border-radius: 10px;
     object-fit: cover;
     margin: 0;
+    
 }
 
-#video-image img:hover{
+#video-image:hover{
     position: relative;
     top: -10px;
 }
 
+
+.video-item h3{
+    padding-left: var(--space-medium);
+    position: relative;
+    bottom: 110px;
+    line-height: 22px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Lobster', cursive;
+    font-weight: 500;
+    color: rgb(241, 241, 159);
+    text-shadow: 2px 2px #222121;
+    width: 150px;
+}
+
+.video-item{
+    height: 150px;
+}
+
+#scroll h2{
+    position: relative;
+    top: 20px;
+}
+
+#movies-carousel h2{
+    position: relative;
+    top: 20px;
+}
+
+#tvshows-carousel h2{
+    position: relative;
+    top: 20px;
+}
 
 .all-categories{
     position: relative;
@@ -85,7 +120,7 @@ padding: 0;
 .movies{
     overflow-x: hidden;
     overflow-y: hidden;
-    padding-top: var(--space-medium);
+    padding-top: 10px;
 }
 
 .button-contianer button{
@@ -113,7 +148,9 @@ padding: 0;
     z-index: 1100;
 }
 
-
+.button-contianer {
+    height: 100px;
+}
 
 /* Admin Screen*/
 #admin-screen{
